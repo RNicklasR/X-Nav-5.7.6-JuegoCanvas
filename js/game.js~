@@ -128,6 +128,9 @@ var update = function (modifier) {
 		if((hero.y -(hero.speed * modifier)) > 32 && !touching(hero.x,(hero.y -(hero.speed * modifier)))){
 			
 			hero.y -= hero.speed * modifier;	
+			if(touching()){
+				hero.y += hero.speed * modifier;	
+			}
 		}	
 	}
 	if (40 in keysDown) { // Player holding down
